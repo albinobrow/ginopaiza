@@ -16,7 +16,7 @@ class StandardInput:
         return self.n
 
     def stdin_array(self):
-        self.arr=input().rstrip().split()
+        self.arr=list(input().rstrip())
         return self.arr
 
     def stdin_integer_array(self):
