@@ -15,21 +15,20 @@ class StandardInput:
         return self.n
 
     def stdin_array(self):
-        self.arr=list(input().rstrip())
+        self.arr=input().rstrip().split()
         return self.arr
 
     def stdin_integer_array(self):
         self.arr=list(map(int,input().rstrip().split()))
         return self.arr
     
-def delay(n,d,a):
-    s=100//n*a
+def delay(d,a):
     if d > 9:
         return 0
     elif d > 0:
-        return int(s*0.8)
+        return int(100*a*0.8/n)
     else:
-        return s
+        return a*100//n
 
 def evaluation(a):
     if a < 60:
@@ -41,9 +40,13 @@ def evaluation(a):
     else:
         return 'A'
 
+def test(n,arr):
+    for d,a in arr:
+        print(evaluation(delay(d,a)))
+
 if __name__ == '__main__':
-    arr=[]
     obj=StandardInput()
     k,n=obj.stdin_integer_array()
+    arr=[]
     [arr.append(obj.stdin_integer_array()) for i in range(k)]
-    [print(evaluation(delay(n,d,a))) for d,a in arr]
+    test(n,arr)
