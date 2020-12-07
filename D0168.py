@@ -24,12 +24,12 @@ class StandardInput:
 
 def test(arr):
     y,m,d=arr
-    return(str(m)+'/'+str(d)+'/'+str(y))
+    return('/'.join([m,d,y]))
 
 def main():
     obj=StandardInput()
     arr=[]
-    [arr.append(obj.stdin_integer()) for i in range(3)]
+    [arr.append(obj.stdin_string()) for i in range(3)]
     print(test(arr))
 
 if __name__ == '__main__':
