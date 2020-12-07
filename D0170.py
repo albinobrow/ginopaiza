@@ -19,7 +19,7 @@ class StandardInput:
         self.arr=input().rstrip().split()
         return self.arr
 
-    def stdin_integer_array(n):
+    def stdin_integer_array(self):
         self.arr=list(map(int,input().rstrip().split()))
         return self.arr
 
