@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: UTF-8
 
-import sys, numpy as np
+import sys
 if sys.version_info[0]<3: input=raw_input
 
 class StandardInput:
