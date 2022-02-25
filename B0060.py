@@ -26,9 +26,6 @@ class StandardInput:
         self.arr=list(map(int,input().rstrip().split()))
         return self.arr
 
-def dice(n):
-    return 7-n
-
 def test(n,h,w,l,s):
     x,y=np.array(l)-1
     arr=np.array([[0]*w]*h)
